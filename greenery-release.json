@@ -1,0 +1,92 @@
+{
+  "timestamp": "2023-12-06T21:08:28.582Z",
+  "channels": {
+    "Stable": {
+      "channel": "Stable",
+      "version": "0.9.4",
+      "revision": "5",
+      "downloads": {
+        "greenery": [
+          {
+            "platform": "linux64",
+            "url": "look-into-setting-past-version-leaving-for-placeholder"
+          },
+          {
+            "platform": "mac-arm64",
+            "url": "look-into-setting-past-version-leaving-for-placeholder"
+          },
+          {
+            "platform": "mac-x64",
+            "url": "look-into-setting-past-version-leaving-for-placeholder"
+          },
+          {
+            "platform": "win32",
+            "url": "look-into-setting-past-version-leaving-for-placeholder"
+          },
+          {
+            "platform": "win64",
+            "url": "look-into-setting-past-version-leaving-for-placeholder"
+          }
+        ]
+      }
+    },
+    "Beta": {
+      "channel": "Beta",
+      "version": "0.9.3",
+      "revision": "4",
+      "downloads": {
+        "greenery": [
+          {
+            "platform": "linux64",
+            "url": "look-into-setting-past-version-leaving-for-placeholder"
+          },
+          {
+            "platform": "mac-arm64",
+            "url": "look-into-setting-past-version-leaving-for-placeholder"
+          },
+          {
+            "platform": "mac-x64",
+            "url": "look-into-setting-past-version-leaving-for-placeholder"
+          },
+          {
+            "platform": "win32",
+            "url": "look-into-setting-past-version-leaving-for-placeholder"
+          },
+          {
+            "platform": "win64",
+            "url": "look-into-setting-past-version-leaving-for-placeholderp"
+          }
+        ]
+      }
+    },
+    "Dev": {
+      "channel": "Dev",
+      "version": "0.9.2",
+      "revision": "3",
+      "downloads": {
+        "greenery": [
+          {
+            "platform": "linux64",
+            "url": "look-into-setting-past-version-leaving-for-placeholder"
+          },
+          {
+            "platform": "mac-arm64",
+            "url": "look-into-setting-past-version-leaving-for-placeholder"
+          },
+          {
+            "platform": "mac-x64",
+            "url": "look-into-setting-past-version-leaving-for-placeholder"
+          },
+          {
+            "platform": "win32",
+            "url": "look-into-setting-past-version-leaving-for-placeholder"
+          },
+          {
+            "platform": "win64",
+            "url": "look-into-setting-past-version-leaving-for-placeholder"
+          }
+        ]
+      }
+    }
+  }
+}
