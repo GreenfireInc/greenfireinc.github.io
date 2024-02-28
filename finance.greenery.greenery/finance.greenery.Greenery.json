@@ -1,0 +1,87 @@
+{
+    "app-id": "finance.greenery.Greenery",
+    "base": "org.electronjs.Electron2.BaseApp",
+    "base-version": "0.9.7",
+    "runtime": "org.gnome",
+    "runtime-version": "0.9.7",
+    "sdk": "org.gnome.Sdk",
+    "command": "greenery",
+    "separate-locales": false,
+    "tags": [
+        "proprietary"
+    ],
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--socket=pulseaudio",
+        "--device=dri"
+    ],
+    "modules": [
+        {
+            "name": "greenery",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -Dm644 finance.greenery.Greenery.desktop /app/share/applications/finance.greenery.Greenery.desktop",
+                "install -Dm644 finance.greenery.Greenery.appdata.xml /app/share/appdata/finance.greenery.Greenery.appdata.xml",
+                "install -Dm644 -t /app/share/icons/hicolor/scalable/apps finance.greenery.Greenery.svg",
+                "install -Dm644 finance.greenery.Greenery-128x128.png /app/share/icons/hicolor/128x128/apps/finance.greenery.Greenery.png",
+                "install -Dm644 finance.greenery.Greenery-64x64.png /app/share/icons/hicolor/64x64/apps/finance.greenery.Greenery.png",
+                "install -D apply_extra /app/bin/apply_extra",
+                "install -D greenery /app/bin/greenery"
+            ],
+            "sources": [
+                {
+                    "type": "script",
+                    "dest-filename": "apply_extra",
+                    "commands": [
+                        "unzip greenery.zip > /dev/null",
+                        "mv Greenery-linux-x64/* .",
+                        "rm -r Greenery-linux-x64 *.zip"
+                    ]
+                },
+                {
+                    "type": "script",
+                    "dest-filename": "greenery",
+                    "commands": [
+                        "export TMPDIR=\"$XDG_RUNTIME_DIR/app/$FLATPAK_ID\"",
+                        "exec zypak-wrapper /app/extra/Greenery \"$@\""
+                    ]
+                },
+                {
+                    "type": "extra-data",
+                    "url": "https://github.com/GreenfireInc/Releases.Greenery/releases/download/v0.9.7/Greenery-linux-x64-0.9.7.zip",
+                    "sha256": "b2d5878dc13728f9313f61afaf7ea5f7c2bfea471f8ff4a85c99fe02ef4bc502",
+                    "size": 221596747,
+                    "filename": "greenery.zip",
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://github.com/GreenfireInc/Releases.Greenery/releases",
+                        "version-pattern": "https://github.com/GreenfireInc/Releases.Greenery/releases/hashes-Greenery.([\\d\\.-]+).txt",
+                        "url-template": "https://github.com/GreenfireInc/Releases.Greenery/releases/Greenery-linux-x64.$version.zip"
+                    }
+                },
+                {
+                    "type": "file",
+                    "path": "finance.greenery.Greenery.svg"
+                },
+                {
+                    "type": "file",
+                    "path": "finance.greenery.Greenery-128x128.png"
+                },
+                {
+                    "type": "file",
+                    "path": "finance.greenery.Greenery-64x64.png"
+                },
+                {
+                    "type": "file",
+                    "path": "finance.greenery.Greenery.desktop"
+                },
+                {
+                    "type": "file",
+                    "path": "finance.greenery.Greenery.appdata.xml"
+                }
+            ]
+        }
+    ]
+}
