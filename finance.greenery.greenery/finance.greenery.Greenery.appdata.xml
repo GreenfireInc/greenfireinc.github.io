@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-  <id>fiannce.greenery.Greenery.desktop</id>
+  <id>finance.greenery.Greenery.desktop</id>
   <name>Greenery</name>
   <developer_name>Greenery</developer_name>
   <summary>Cryptocurrency bookkeeping and accounting wallet</summary>
