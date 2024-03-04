@@ -1,10 +1,10 @@
 {
     "app-id": "finance.greenery.Greenery",
     "base": "org.electronjs.Electron2.BaseApp",
-    "base-version": "0.9.7",
-    "runtime": "org.gnome",
-    "runtime-version": "0.9.7",
-    "sdk": "org.gnome.Sdk",
+    "base-version": "23.08",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "23.08",
+    "sdk": "org.freedesktop.Sdk",
     "command": "greenery",
     "separate-locales": false,
     "tags": [
